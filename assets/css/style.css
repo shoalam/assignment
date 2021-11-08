@@ -1,0 +1,343 @@
+/* General Styling */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+button:focus,
+input:focus {
+    outline: none;
+    border: 0;
+}
+body{
+    height: 100vh;
+    background-color: rgba(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* First Slide */
+
+/* Popup Styling */
+
+.popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup{
+    width: 975px;
+    max-width: 100%;
+    background-color: #E5E5E5;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.popup-header{
+    background-color: #fff;
+    height: 90px;
+    border-radius: 20px 20px 0 0;
+}
+.container{
+    max-width: 90%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Range Slider */
+
+.range-slider{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.range-text{
+    font-size: 11px;
+    font-weight: 600;
+    color: #97A0B2;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 7px;
+    background: #E9F5FA;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 7px;
+    height: 7px;
+    background-color: #2DB9EB;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .slider::-moz-range-progress {
+      height: 7px;
+      border-radius: 25px;
+      background-color: #2DB9EB;
+  }
+  .slider::-moz-range-thumb {
+    width: 7px;
+    height: 7px;
+    background-color: #2DB9EB;
+    cursor: pointer;
+  }
+
+  /* Main Section  */
+
+.main{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.bg-brand{
+    background-color: #2DB9EB;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;  
+    border-radius: 0 0 0 20px;
+    z-index: -1;
+}
+
+/* Step Timeline CSS */
+
+.step-timeline ul {
+    list-style: none;
+    position: relative;
+    padding-left: 40px;
+}
+.step-timeline ul::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 1px;
+    background: #fff;
+    height: calc(100% - 8px);
+}
+.step-timeline ul li {
+    margin-bottom: 25px;
+    position: relative;
+}
+.step-timeline ul li::before {
+	content: attr(data-counter);
+	position: absolute;
+	left: -40px;
+	top: -7px;
+	height: 30px;
+	width: 30px;
+	background: #2DB9EB;
+    color: #fff;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	line-height: 30px;
+	text-align: center;
+}
+
+.step-timeline ul li:first-child::before{
+    background-color: #fff;
+    color: #2DB9EB;
+}
+
+.step-timeline ul li strong {
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* First Slide Form Styling */
+
+.form-control{
+    height: 45px;
+}
+
+.form-control:focus{
+    outline: 0;
+    border: 1px solid #2DB9EB;
+    box-shadow: none;
+    color: transparent;
+    background-color: #fff;
+}
+input[type="text"],
+input[type="number"] {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+}
+
+.prev-btn{
+    border: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: #97A0B2;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.prev-btn .fa{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #2DB9EB;
+    border-radius: 50%;
+}
+
+.next-btn {
+    background-color: #2DB9EB;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    border: 0;
+    padding: 10px 30px;
+}
+
+.btn-skip{
+    font-size: 12px;
+    font-weight: 500;
+    border: 0;
+    color: #97A0B2;
+}
+
+/* Second Slide Styling */
+
+.second-slide{
+    display: none;
+}
+
+.second-slide .step-timeline ul li:nth-child(1):before {
+	content: '\2713';
+    color: #04D225;
+    background-color: #ADFFBA;
+	
+}
+.second-slide .step-timeline ul li:nth-child(2):before {
+	background-color: #fff;
+    color: #2DB9EB;
+	
+}
+.second-slide .step-timeline ul li:nth-child(1) strong{
+    margin-bottom: 0;
+}
+.second-slide .step-timeline ul li span{
+    font-size: 9px;
+    font-weight: 500;
+    color: #ADFFBA;
+    margin-bottom: 30px;
+}
+
+.second-slide .card{
+    width: 180px;
+    height: 230px;
+    border: none;
+    padding: 15px;
+}
+
+.second-slide .card .card-body {
+   padding: 0;
+}
+
+.second-slide .card .square {
+    width: 100%;
+    height: 150px;
+    background-color: #EDF1F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second-slide .card .square p{
+    font-size: 9px;
+    font-weight: 400;
+    color: #97A0B2;
+    margin-bottom: 0;
+    padding: 5px 15px;
+    background-color: #fff;
+}
+.second-slide .card h5{
+    font-size: 14px;
+    font-weight: 600;
+    color: #192440;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.second-slide .card p{
+    font-size: 9px;
+    font-weight: 400;
+    color: #97A0B2;
+    margin-bottom: 0;
+}
+
+/* Custom Input file */
+
+.second-slide input[type="file"]{
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+.second-slide input[type="file"] + label{
+  border: none;
+  color: #192440;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  outline: none;
+  position: relative;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+    body{
+        height: 100%;
+        overflow: visible;
+    }
+    .popup{
+        border-radius: 0;
+    }
+    .bg-brand{
+        height: 42%;
+        border-radius: 0;
+    }
+}
